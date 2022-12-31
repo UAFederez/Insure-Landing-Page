@@ -103,7 +103,7 @@ main {
 .bg-intro-left-desktop {
     position: absolute;
     left: 0;
-    bottom:  calc(-var(--img-overhang));
+    bottom: calc(-var(--img-overhang));
     transform: translateY(80%);
 }
 .bg-intro-right-desktop {
@@ -144,7 +144,8 @@ main {
 }
 
 .selling-points-container {
-    margin-block: 10rem;
+    margin-top: calc(var(--img-overhang) + 10rem);
+    margin-bottom: 10rem;
 }
 
 .selling-points-title {
@@ -156,7 +157,7 @@ main {
 }
 
 .selling-points-title::before {
-    content: '';
+    content: "";
     display: block;
     top: 0;
     position: absolute;
@@ -203,7 +204,8 @@ main {
     text-align: center;
 }
 
-.sitemap .h3, a {
+.sitemap .h3,
+a {
     font-family: var(--ff-body);
     font-size: 0.95rem;
     text-transform: uppercase;
@@ -238,11 +240,12 @@ main {
 
 .cta-section {
     padding: var(--space-400);
-    margin-block: 5rem;
+    margin-block: 10rem;
 }
 
 .cta-container {
-    background: url('../images/bg-pattern-how-we-work-mobile.svg') var(--col-primary-400);
+    background: url("../images/bg-pattern-how-we-work-mobile.svg")
+        var(--col-primary-400);
     background-repeat: no-repeat;
     background-position: top right;
     display: flex;
@@ -274,13 +277,14 @@ main {
     background: transparent;
 }
 
-.cta-btn:hover, .cta-btn:focus-visible {
+.cta-btn:hover,
+.cta-btn:focus-visible {
     background-color: var(--col-neutral-900);
     color: var(--col-neutral-400);
 }
 
 footer {
-    background: url('../images/bg-pattern-footer-mobile.svg');
+    background: url("../images/bg-pattern-footer-mobile.svg");
     background-repeat: no-repeat;
     background-position: top left;
     padding-block: 5rem;
@@ -293,8 +297,11 @@ footer {
     border-bottom: 1px solid var(--col-neutral-800);
 }
 
-@media screen and (min-width: 60rem) {
+.attribution {
+    background-color: var(--col-neutral-900);
+}
 
+@media screen and (min-width: 60rem) {
     .mobile-bg-pattern {
         display: none;
     }
@@ -354,7 +361,8 @@ footer {
     }
 
     .cta-container {
-        background: url('../images/bg-pattern-how-we-work-desktop.svg') var(--col-primary-400);
+        background: url("../images/bg-pattern-how-we-work-desktop.svg")
+            var(--col-primary-400);
         background-repeat: no-repeat;
         background-position: top right;
         display: flex;
@@ -384,6 +392,7 @@ footer {
     .selling-points-title {
         text-align: left;
         font-size: 4.5rem;
+        margin-top: 18rem;
     }
 
     .selling-points-title::before {
@@ -391,7 +400,8 @@ footer {
         transform: translateX(0%);
     }
     footer {
-        background: url('../images/bg-pattern-footer-desktop.svg');
+        background: url("../images/bg-pattern-footer-desktop.svg");
+        background-color: var(--col-neutral-900);
         background-repeat: no-repeat;
         background-position: top left;
     }

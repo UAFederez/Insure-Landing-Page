@@ -14,7 +14,7 @@ header {
 }
 
 main {
-    padding-top: 5.125rem;
+    padding-top: 4.1875rem;
 }
 
 .body-no-scroll {
@@ -38,7 +38,10 @@ main {
     width: 100vw;
     left: 0;
     top: 0;
-    background: var(--col-neutral-400);
+    background-color: var(--col-neutral-400);
+    background-image: url("../images/bg-pattern-mobile-nav.svg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }
 
 nav ul div {
@@ -77,7 +80,7 @@ nav ul {
 }
 
 nav ul li a {
-    border: 2px solid var(--col-neutral-900);
+    border: 2px solid transparent;
     color: var(--col-neutral-900);
     display: block;
     font-weight: bold;
@@ -90,12 +93,21 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover,
+nav ul li a:focus-within {
+    border-color: var(--col-neutral-900);
+}
+
 .nav-fluid-container {
     width: min(100%, var(--container-width));
     margin-inline: auto;
 }
 
 @media screen and (min-width: 60rem) {
+    main {
+        padding-top: 5.125rem;
+    }
+
     .hamburger-btn {
         display: none;
     }
