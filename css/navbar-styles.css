@@ -44,7 +44,7 @@ main {
     background-position: right bottom;
 }
 
-nav ul div {
+nav ul {
     position: relative;
     z-index: 9999;
 }
@@ -56,27 +56,28 @@ nav ul {
     text-align: center;
     padding-top: var(--space-500);
 }
+@media screen and (max-width: 60rem) {
+    .primary-navigation ul[data-visible="true"] {
+        display: block;
+    }
 
-.primary-navigation ul[data-visible="true"] {
-    display: block;
-}
+    .primary-navigation ul[data-visible="false"] {
+        display: none;
+    }
 
-.primary-navigation ul[data-visible="false"] {
-    display: none;
-}
+    .primary-navigation ul[data-visible="false"] .nav-menu-close {
+        display: none;
+    }
+    .primary-navigation ul[data-visible="false"] .nav-menu-open {
+        display: block;
+    }
 
-.primary-navigation ul[data-visible="false"] .nav-menu-close {
-    display: none;
-}
-.primary-navigation ul[data-visible="false"] .nav-menu-open {
-    display: block;
-}
-
-.primary-navigation ul[data-visible="true"] .nav-menu-open {
-    display: none;
-}
-.primary-navigation ul[data-visible="true"] .nav-menu-close {
-    display: block;
+    .primary-navigation ul[data-visible="true"] .nav-menu-open {
+        display: none;
+    }
+    .primary-navigation ul[data-visible="true"] .nav-menu-close {
+        display: block;
+    }
 }
 
 nav ul li a {
@@ -129,7 +130,7 @@ nav ul li a:focus-within {
     }
 
     .primary-navigation ul {
-        display: block !important;
+        display: flex;
         margin: 0;
         padding: 0;
     }
